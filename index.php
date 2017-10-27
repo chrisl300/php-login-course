@@ -15,7 +15,7 @@
   <body>
 
     <div class="uk-section uk-container">
-      <div class="uk-grid uk-child-width-1-3@s .uk-child-width-1-1">
+      <div class="uk-grid uk-child-width-1-3@s .uk-child-width-1-1" uk-grid>
         <form class="uk-form-stacked" js-login>
 
           <div class="uk-margin">
@@ -34,7 +34,7 @@
               <div class="uk-margin">
                   <button class="uk-button uk-button-default" type="submit">Login</button>
 
-              </div>
+              </div>x
         </form>
     </div>
 
