@@ -26,6 +26,10 @@
           echo "Hello world. Today is: ";
           echo date("Y m d");
           ?>
+          <p>
+              <a href="/login.php">Login</a>
+              <a href="/register.php">Register</a>
+          </p>
     </div>
 
     <?php require_once "inc/footer.php"; ?>
