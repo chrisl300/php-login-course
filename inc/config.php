@@ -8,5 +8,10 @@
   }
 
   // Our config is below
-  
+
+  // Inlide the DB.php File
+  include_once "classes/DB.php";
+
+  $con = DB::getConnection();
+
 ?>
