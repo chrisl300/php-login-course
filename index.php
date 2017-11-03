@@ -4,8 +4,8 @@
 	define('__CONFIG__', true);
 	// Require the config
 	require_once "inc/config.php";
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,8 +32,8 @@
   			<a href="/register.php">Register</a>
   		</p>
   	</div>
-About to call footer
+
   	<?php require_once "inc/footer.php"; ?>
-    returned from footer
+
   </body>
 </html>
