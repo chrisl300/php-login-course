@@ -5,7 +5,7 @@ $(document)
   var _form = $(this);
   var _error = $(".js-error", _form);
 
-  var data = {
+  var  = {
     // Look in the  _form for 'email:
     email: $("input[type='email']", _form).val(),
         // Look in the  _form for 'password:
@@ -13,12 +13,12 @@ $(document)
   };
 
   // Check that the email address is longer than the shortest possible
-  if (data.email.length < 6) {
+  if (dataObj.email.length < 6) {
     _error
       .text("Your email address is too short")
       .show();
     return false;
-  } else if (data.password.length < 11){
+  } else if (dataObj.password.length < 11){
     _error
       .text("Please enter a password that is at least 11 characters long.")
       .show();
@@ -30,7 +30,24 @@ $(document)
   // Clear the error message (if any)
   _error.hide();
 
-  console.log(data);
-
-  return false;
+  $.ajax({
+      type: 'POST', // POST not GET so informnation is not available in the url.
+      url: '/ajax/register.php',      // Not set
+      data: dataObj,
+      dataType: 'json',  // dataObj type is json
+      async: true
+  })
+  .done(function ajaxDone(data) {
+    // returns whatever data is
+    console.log(data);
+  })
+  .fail(function ajaxFailed(e) {
+    // This failed
+    console.log(e);
+  })
+  .always(function ajaxAlwaysDoThis(data) {
+    // Always do this whether it fails or succeeds
+        console.log('Always');
+  })
+    return false;
 })
