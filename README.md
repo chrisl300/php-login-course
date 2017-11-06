@@ -1,2 +1,2 @@
-# php-login-course
-github for PHP Login System Course
+# PHP-Login-System
+A sample login system with user registration
